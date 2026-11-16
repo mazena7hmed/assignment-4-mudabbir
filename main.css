@@ -1,0 +1,1155 @@
+body{
+margin: 0px;
+}
+*{
+    box-sizing: border-box;
+    font-family: IBM Plex Sans Arabic;
+    text-align: right;
+}
+img{
+    width: 100%;
+}
+.flex-btw{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+nav{
+    width: 16.8%;
+    position: fixed;
+    right: 0;
+    background-color: #fff;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    border-left: oklch(0.928 0.006 264.531) 0.8px solid;
+    padding: 28px 22px 24px 34px;
+}
+.back{
+     background-color:#fff ;
+    border:oklch(0.928 0.006 264.531) 0.8px solid  ;
+    border-radius: 16px;
+    padding: 24px;
+}
+.header-divs img{
+    width: 8px;
+    height: 12px;
+}
+.header-divs span{
+    color: oklch(0.446 0.03 256.802);
+    font-weight: 500;
+    font-size:16px ;
+    line-height: 20px;
+}
+.header-divs span:hover{
+    color: black;
+}
+/* +++++++++++++++++++++++++++++++++++++++++++++++++ */
+main{
+    width: 82%;
+    background-color: oklab(0.967 -0.000285348 -0.0029864 / 0.5);
+    min-height: 100vh;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3,10fr);
+    grid-template-rows: repeat(10,auto);
+    grid-template-areas:
+    "header header header"
+    "expenses income currentbalance"
+    "transactions transactions modern-activities"
+    "transactions transactions modern-activities"
+    "transactions transactions bills"
+    "transactions transactions bills"
+    "payment analysis genral"
+    "payment analysis genral"
+    "payment summary genral"
+    "payment summary genral"
+    ;
+    margin: 0px;
+    padding: 32px 12px 40px;
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.header{
+    grid-area: header;
+    background-image: linear-gradient(to right, oklch(0.985 0.002 247.839), #fff, oklch(0.985 0.002 247.839));
+    border: 0.8px solid oklch(0.928 0.006 264.531);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.1);
+}
+.image{
+    width: 56px;
+    height:56px;
+    padding: 15px;
+    background-color: oklch(0.546 0.245 262.881);
+    border:1.6px solid oklch(0.546 0.245 262.881) ;
+    border-radius: 16px;
+    box-shadow: oklch(0.546 0.245 262.881) 0px 0px 5px 0px;
+}
+.right-header{
+    margin: 0px;
+}
+.right-header h1{
+    text-align: right;
+    margin: 0px;
+    line-height: 40px;
+    font-size: 36px;
+    font-weight: 700;
+}
+.right-header h1 + span{
+    display: block;
+    line-height: 24px;
+}
+.right-header .online{
+    border-radius: 8px;
+    background-color: oklch(0.982 0.018 155.826);
+    padding: 6px 12px;
+    font-weight: 700;
+    border: 0.8px solid  oklch(0.962 0.044 156.743) ;
+    gap: 8px;
+    color:  oklch(0.627 0.194 149.214) ;
+}
+.online .boint {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: oklch(0.627 0.194 149.214);
+}
+.left-header .my-account{
+    border-radius: 12px;
+    border: oklch(0.928 0.006 264.531) solid 0.8px;
+    background-color: #fff;
+    padding: 8px 16px;
+    gap: 8px;
+}
+.my-account p{
+    margin: 0px;
+    font-weight: 600;
+    margin: 3px;
+}
+.my-account .name{
+       font-size: 14px;
+       color: black;
+}
+.my-account .type-account{
+    color:oklch(0.551 0.027 264.364) ;
+    font-size: 12px;
+    text-align: right;
+}
+.my-account:hover{
+     box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.15);
+}
+.my-account img{
+    width: 40px;
+    height: 40px;
+    border-radius:12px ;
+}
+ .my-image{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: 0.8px solid oklch(0.928 0.006 264.531) ;
+    border-radius: 12px;
+    padding: 10px;
+}
+.my-image:hover{
+    background-color: oklch(0.928 0.006 264.531);
+    cursor: pointer;
+}
+.image-not{
+    position: relative;
+    
+}
+.image-not span{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: -3px;
+    right: -5px;
+    font-size: 13px;
+    text-align: center;
+    color:#fff ;
+    font-weight: 600;
+}
+/* +++++++++++++++++++++++ */
+.expenses{
+    grid-area: expenses;
+    margin-right: 5px;
+}
+.card-money{
+    background-color:#fff ;
+    border: oklch(0.928 0.006 264.531) 0.8px solid ;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 8px;
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.1);
+}
+.card-money img{
+    width: 20px;
+    height: 20px;
+}
+.MoneyTracker{
+    justify-content: end;
+    gap: 3px;
+    margin-top: 0;
+}
+.card-money .type-money{
+ color: oklch(0.551 0.027 264.364);
+ font-size: 14px;
+ font-weight: 600;
+ margin-bottom: 8px;
+}
+.card-money .money{
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+}
+.MoneyTracker p{
+    color: red;
+    font-size: 14px;
+    font-weight: 600;
+}
+.income{
+    grid-area: income ;
+    margin: 0px 3px;
+}
+.currentbalance{
+    grid-area: currentbalance ;
+    margin-left: 5px;
+}
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.bills{
+    grid-area: bills;
+}
+.img-bill img {
+    width: 100%;
+    height: 100%;
+}
+.img-bill{
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    background-color: oklch(0.973 0.071 103.193);
+    border-radius: 8px;
+    border:oklch(0.973 0.071 103.193)  solid 2px;
+}
+.card {
+    flex-direction: column;
+    gap: 0px;
+}
+.card p{
+    margin-block: 3px;
+}
+.total-bill{
+    flex-direction: column;
+    gap: 0px;
+    margin-bottom: 10px;
+}
+.total-bill p{
+    margin: 0px;
+    color: oklch(0.551 0.027 264.364);
+    font-size: 14px;
+    font-weight: 600;
+}
+.total-bill .total-price-bill{
+    color: black;
+    font-size: 30px;
+    font-weight:700 ;
+}
+.cards-bill{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2 , 1fr);
+    grid-template-areas:
+    "card1 card2"
+    "card3 card4"
+    ;
+    gap:12px ;
+}
+.card-bill-1{
+    grid-area: card1;
+}
+.card-bill-2{
+    grid-area: card2;
+}
+.card-bill-3{
+    grid-area: card3;
+}
+.card-bill-4{
+    grid-area: card4;
+}
+/* +++++++++++++++++++++++++++++++++++ */
+.transactions{
+    grid-area: transactions;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.1);
+}
+.Transactions{
+    width: 20%;
+}
+.Categories{
+    width: 60%;
+    margin: auto;
+}
+.Classification{
+    border-bottom: #999 1px solid ;
+}
+.Transactions img{
+    width:40px ;
+    height:40px ;
+    border-radius: 50%;
+}
+.Categories img{
+    width: 12px;
+    height: 12px;
+}
+.faka{
+    gap: 2px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.div{
+    margin-block: 30px;
+}
+.div9{
+    margin-bottom: 0px;
+}
+.profile{
+    justify-content: end;
+    gap: 7px;
+}
+.profile p {
+    margin: 0;
+        font-weight: 500;
+}
+.profile span{
+    color: oklch(0.551 0.027 264.364);
+    font-size: 12px;
+    font-weight: 600;
+}
+/* ----------------------------------------------------------------------------- */
+.modern-activities{
+    grid-area: modern-activities;
+}
+.card-modern-1{
+    align-items: flex-start;
+}
+.right-card-modern{
+    align-items: flex-start;
+}
+.img-modern{
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: oklch(0.932 0.032 255.585);
+}
+.creat-add-acc h4,
+.creat-add-acc p{
+    margin: 0 0 4px;
+}
+.but{
+    margin-top:16px ;
+    padding-top: 16px;
+    border-top: 0.8px solid ;
+}
+.but button{
+    border: 0;
+    background-color: #fff;
+    margin-right: 30%;
+    font-weight: 700;
+    font-size: 20px;
+    color: oklab(0.546 -0.030363 -0.243111);
+}
+.but button:hover{
+    color: blue;
+}
+/* ________________________________________________________________- */
+.payment{
+    grid-area: payment;
+}
+/* ______________________________________________________________________ */
+ .analysis{
+  grid-area:analysis ;
+ }
+ .red ,.green{
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    align-self: center;
+ }
+ .red{
+    background-color: oklch(0.637 0.237 25.331);
+ }
+ .green{
+    background-color: oklch(0.723 0.219 149.579);
+ }
+.week1 .flex-center{
+    gap: 2px;
+}
+ .week1 .green{
+    width: 10px;
+    height: 50px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 2px ;
+    align-self: flex-end;
+ }
+ /* ++++++++++++++++++++++++++++++ */
+ .genral{
+    grid-area: genral;
+ }
+ .summary{
+    grid-area: summary;
+ }
+/* ================= completed parts ================= */
+/* ---------- nav ---------- */
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.logo-nav{
+    justify-content: end;
+    gap: 16px;
+    margin-bottom: 36px;
+}
+.text-logo h1{
+    margin: 0;
+    font-size: 29px;
+    font-weight: 700;
+}
+.text-logo span{
+    color: oklch(0.446 0.03 256.802);
+    font-size: 13px;
+}
+nav .image{
+    width: 56px;
+    height: 56px;
+    padding: 16px;
+}
+.item-nav{
+    justify-content: end;
+    gap: 14px;
+    height: 50px;
+    padding: 0 14px;
+    margin-bottom: 6px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: oklch(0.446 0.03 256.802);
+}
+.item-nav img{
+    width: 18px;
+    height: 18px;
+}
+.item-nav:hover,
+.item-quick:hover{
+    background-color: oklch(0.985 0.002 247.839);
+    transform: translate(1px , 1px);
+}
+
+.item-nav.active{
+    background-color: oklch(0.97 0.014 254.604);
+    color: oklch(0.546 0.245 262.881);
+}
+.title-quick{
+    margin: 38px 0 16px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.item-quick{
+    justify-content: end;
+    gap: 12px;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.img-quick{
+    width: 40px;
+    height: 40px;
+    padding: 11px;
+    border-radius: 10px;
+}
+.img-quick img{
+    width: 100%;
+    height: 100%;
+}
+.send{
+    background-color: oklch(0.932 0.032 255.585);
+}
+.add{
+    background-color: oklch(0.962 0.044 156.743);
+}
+.pay{
+    background-color: oklch(0.946 0.033 307.174);
+}
+.invest{
+    background-color: oklch(0.954 0.038 75.164);
+}
+/* ---------- cards money ---------- */
+.card-money .type-money{
+    font-size: 13px;
+    font-weight: 500;
+}
+.card-money .money{
+    font-size: 32px;
+}
+.MoneyTracker.up p{
+    color: oklch(0.627 0.194 149.214);
+}
+/* ---------- modern activities ---------- */
+.modern-activities h3,
+.transactions h3,
+.bills h3,.genral h3,
+.analysis h3,
+.summary h3,.payment h3{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+.modern-activities,
+.bills,
+.genral,
+.analysis,
+.summary,
+.payment{
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.1);
+}
+.modern-activities .card-modern-1{
+    margin-top: 16px;
+    padding: 13px;
+    border-radius: 6px;
+    border: 0;
+    border-left: 3px solid;
+}
+.modern-activities .card-modern-blue{
+    background-color: oklch(0.97 0.014 254.604);
+    border-left-color: oklch(0.623 0.214 259.815);
+}
+.modern-activities .card-modern-green{
+    background-color: oklch(0.982 0.018 155.826);
+    border-left-color: oklch(0.723 0.219 149.579);
+}
+.card-modern-blue .left-card-modern span{
+    color: oklch(0.546 0.245 262.881);
+}
+.card-modern-green .left-card-modern span{
+    color: oklch(0.627 0.194 149.214);
+}
+.left-card-modern span{
+    font-size: 10px;
+    font-weight: 600;
+}
+.creat-add-acc p{
+    color: oklch(0.446 0.03 256.802);
+    font-size: 10px;
+}
+.time-modern{
+    display: block;
+    margin-top: 8px;
+    color: oklch(0.551 0.027 264.364);
+    font-size: 10px;
+}
+.card-modern-green .img-modern{
+    background-color: oklch(0.962 0.044 156.743);
+}
+.img-modern img{
+    width: 100%;
+    height: 100%;
+}
+.but{
+    border-top: 0.8px solid oklch(0.928 0.006 264.531);
+}
+.but button{
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: oklch(0.546 0.245 262.881);
+    cursor: pointer;
+}
+/* ---------- transactions ---------- */
+.heder h3{
+    margin: 0;
+}
+.heder span{
+    gap: 4px;
+    font-weight: 500;
+    color: oklch(0.446 0.03 256.802);
+}
+.heder img{
+    width: 6px;
+    height: 10px;
+}
+.Classification{
+    margin-top: 24px;
+    padding-bottom: 4px;
+    border-bottom: oklch(0.928 0.006 264.531) 1px solid;
+}
+.Classification p{
+    font-weight: 500;
+    color: oklch(0.446 0.03 256.802);
+}
+.div{
+    margin-block: 0px;
+    padding-block: 16px;
+    border-bottom: oklch(0.967 0.003 264.542) 1px solid;
+}
+.div9{
+    border-bottom: 0;
+}
+.Categories > :nth-child(1){
+    width: 15%;
+}
+.Categories > :nth-child(2){
+    width: 20%;
+}
+.Categories > :nth-child(3){
+    width: 30%;
+}
+.Categories > :nth-child(4){
+    width: 35%;
+    padding: 0;
+}
+.Categories .faka{
+    width: auto;
+    margin-left: auto;
+}
+.Categories > .state{
+    width: fit-content;
+    margin: 0 auto;
+}
+.state{
+    width: fit-content;
+    padding: 3px 13px;
+    border-radius: 16px;
+    background-color: oklch(0.962 0.044 156.743);
+    color: oklch(0.527 0.154 150.069);
+    font-size: 11px;
+    font-weight: 500;
+}
+.pending{
+    background-color: oklch(0.973 0.071 103.193);
+    color: oklch(0.476 0.114 61.907);
+}
+.plus{
+    color: oklch(0.723 0.219 149.579);
+    font-weight: 600;
+}
+.Categories span{
+    font-weight: 500;
+    white-space: nowrap;
+}
+.Categories .faka img{
+    width: 12px;
+    height: 12px;
+    border-radius: 0;
+}
+.cat-income{
+    background-color: oklch(0.962 0.044 156.743);
+    color: oklch(0.527 0.154 150.069);
+}
+.food{
+    background-color: oklch(0.954 0.038 75.164);
+    color: oklch(0.47 0.157 37.304);
+}
+.shop{
+    background-color: oklch(0.932 0.032 255.585);
+    color: oklch(0.488 0.243 264.376);
+}
+.split{
+    background-color: oklch(0.946 0.033 307.174);
+    color: oklch(0.496 0.265 301.924);
+}
+.work{
+    background-color: oklch(0.962 0.044 156.743);
+    color: oklch(0.527 0.154 150.069);
+}
+.fuel{
+    background-color: oklch(0.936 0.032 17.717);
+    color: oklch(0.505 0.213 27.518);
+}
+.fun{
+    background-color: oklch(0.93 0.034 272.788);
+    color: oklch(0.457 0.24 277.023);
+}
+.health{
+    background-color: oklch(0.956 0.045 203.388);
+    color: oklch(0.52 0.105 223.128);
+}
+.edu{
+    background-color: oklch(0.962 0.044 156.743);
+    color: oklch(0.527 0.154 150.069);
+}
+.profile .naming{
+    text-align: right;
+}
+.profile .naming p{
+    font-size: 13px;
+}
+.profile{
+    gap: 12px;
+}
+.icon-trans{
+    width: 40px;
+    height: 40px;
+    padding: 11px;
+    border-radius: 50%;
+}
+.Transactions .icon-trans img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+.icon-trans.food{
+    background-color: oklch(0.954 0.038 75.164);
+}
+.icon-trans.shop{
+    background-color: oklch(0.932 0.032 255.585);
+}
+.icon-trans.fuel{
+    background-color: oklch(0.936 0.032 17.717);
+}
+.icon-trans.fun{
+    background-color: oklch(0.93 0.034 272.788);
+}
+.icon-trans.health{
+    background-color: oklch(0.956 0.045 203.388);
+}
+.icon-trans.edu{
+    background-color: oklch(0.962 0.044 156.743);
+}
+/* ---------- bills ---------- */
+.bills{
+    padding: 19px 19px 19px;
+}
+.total-bill{
+    margin-top: 20px;
+}
+.total-bill .total-price-bill{
+    font-size: 29px;
+}
+.cards-bill .card{
+    padding: 13px;
+    background-color: oklch(0.985 0.002 247.839);
+    border-radius: 10px;
+    align-items: center;
+}
+.cards-bill .card p{
+    margin-block: 2px;
+}
+.type-bill{
+    color: oklch(0.551 0.027 264.364);
+    font-size: 10px;
+    font-weight: 500;
+}
+.cost-bill{
+    font-size: 14px;
+    font-weight: 700;
+}
+.Payment{
+    color: oklch(0.551 0.027 264.364);
+    font-size: 10px;
+    font-weight: 500;
+}
+.orange{
+    color: oklch(0.646 0.222 41.116);
+}
+.red-time{
+    color: oklch(0.577 0.245 27.325);
+}
+.green-time{
+    color: oklch(0.627 0.194 149.214);
+}
+.img-bill{
+    margin-bottom: 5px;
+}
+.img-bill.blue{
+    background-color: oklch(0.932 0.032 255.585);
+    border-color: oklch(0.932 0.032 255.585);
+}
+.img-bill.red{
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background-color: oklch(0.936 0.032 17.717);
+    border-color: oklch(0.936 0.032 17.717);
+}
+.img-bill.green{
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background-color: oklch(0.962 0.044 156.743);
+    border-color: oklch(0.962 0.044 156.743);
+}
+/* ---------- genral (budget overview) ---------- */
+.total-budget{
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 13px;
+    border: oklch(0.932 0.032 255.585) 0.8px solid;
+    background-image: linear-gradient(to right, oklch(0.97 0.014 254.604), oklch(0.962 0.018 272.314));
+}
+.total-budget p{
+    margin: 0 0 5px;
+}
+.label-right{
+    color: oklch(0.546 0.245 262.881);
+    font-size: 11px;
+    font-weight: 500;
+}
+.label-left{
+    color: oklch(0.551 0.027 264.364);
+    font-size: 11px;
+    font-weight: 500;
+}
+.all-budget{
+    color: oklch(0.282 0.091 267.935);
+    font-size: 22px;
+    font-weight: 700;
+}
+.remain{
+    color: oklch(0.723 0.219 149.579);
+    font-size: 19px;
+    font-weight: 700;
+}
+.percent,
+.used{
+    font-size: 11px;
+    font-weight: 500;
+    color: oklch(0.446 0.03 256.802);
+}
+.track{
+    height: 6px;
+    margin-top: 10px;
+    border-radius: 3px;
+    background-color: oklch(0.928 0.006 264.531);
+    overflow: hidden;
+}
+.fill-total{
+    width: 84%;
+    height: 100%;
+    margin-left: auto;
+    border-radius: 3px;
+    background-image: linear-gradient(to right, oklch(0.623 0.214 259.815), oklch(0.585 0.233 277.117));
+}
+.fill{
+    height: 100%;
+    margin-left: auto;
+    border-radius: 3px;
+}
+.w50{ width: 50%; }
+.w80{ width: 80%; }
+.w86{ width: 86%; }
+.w100{ width: 100%; }
+.orange-fill{ background-color: oklch(0.646 0.222 41.116); }
+.red-fill{ background-color: oklch(0.586 0.253 17.585); }
+.pink-fill{ background-color: oklch(0.592 0.249 0.584); }
+.green-fill{ background-color: oklch(0.723 0.219 149.579); }
+.card-budget{
+    margin-top: 16px;
+    padding: 16px;
+    background-color: oklch(0.985 0.002 247.839);
+}
+.card-budget:hover{
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.15);
+}
+.card-budget p{
+    margin: 0 0 5px;
+}
+.name-budget p{
+    font-size: 14px;
+    font-weight: 600;
+}
+.name-budget span{
+    color: oklch(0.551 0.027 264.364);
+    font-size: 11px;
+}
+.right-budget{
+    gap: 12px;
+}
+.img-budget{
+    width: 40px;
+    height: 40px;
+    padding: 11px;
+    border-radius: 10px;
+}
+.img-budget img{
+    width: 100%;
+    height: 100%;
+}
+.img-budget.fun{ background-color: oklch(0.954 0.038 75.164); }
+.img-budget.bill{ background-color: oklch(0.936 0.032 17.717); }
+.img-budget.care{ background-color: oklch(0.948 0.028 342.258); }
+.img-budget.home{ background-color: oklch(0.962 0.044 156.743); }
+.price-budget{
+    font-size: 14px;
+    font-weight: 600;
+}
+.pill-budget{
+    padding: 2px 8px;
+    border-radius: 16px;
+    font-size: 11px;
+    font-weight: 500;
+}
+.green-pill{
+    background-color: oklch(0.962 0.044 156.743);
+    color: oklch(0.527 0.154 150.069);
+}
+.red-pill{
+    background-color: oklch(0.936 0.032 17.717);
+    color: oklch(0.505 0.213 27.518);
+}
+.yellow-pill{
+    background-color: oklch(0.973 0.071 103.193);
+    color: oklch(0.476 0.114 61.907);
+}
+/* ---------- analysis ---------- */
+.center{
+    margin-top: 20px;
+    font-size: 11px;
+    color: oklch(0.446 0.03 256.802);
+}
+.center .red,
+.center .green{
+    width: 12px;
+    height: 12px;
+}
+.chart{
+    margin-top: 64px;
+    padding: 0 8px;
+    align-items: flex-end;
+    margin-bottom: 32px;
+}
+.chart > div{
+    text-align: center;
+}
+.chart span{
+    display: block;
+    margin-top: 10px;
+    font-size: 11px;
+    color: oklch(0.446 0.03 256.802);
+    text-align: center;
+}
+.chart .flex-center{
+    align-items: flex-end;
+    gap: 2px;
+}
+.chart .red,
+.chart .green{
+    width: 16px;
+    align-self: flex-end;
+    border-radius: 0;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.chart .red{
+    height: 43px;
+}
+.chart .green{
+    height: 96px;
+    border-radius: 0;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.week4 .red{ height: 56px; }
+.week4 .green{ height: 120px; }
+.week3 .red{ height: 48px; }
+.week3 .green{ height: 115px; }
+.week2 .red{ height: 56px; }
+.week2 .green{ height: 123px; }
+/* ---------- summary ---------- */
+.card-summary{
+    margin-top: 16px;
+    padding: 12px 16px;
+    background-color: oklch(0.985 0.002 247.839);
+    border-radius: 10px;
+}
+.card-summary p{
+    margin: 0 0 3px;
+    font-weight: 600;
+    font-size: 14px;
+}
+.type-acc span{
+    color: oklch(0.551 0.027 264.364);
+    font-size: 10px;
+}
+.right-card-summary{
+    gap: 12px;
+}
+.img-summary{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+.img-summary img{
+    width: 100%;
+    height: 100%;
+}
+.img-summary.save{
+    background-color: oklch(0.962 0.044 156.743);
+}
+.img-summary.credit{
+    background-color: oklch(0.946 0.033 307.174);
+}
+.left-card-summary .minus{
+    color: oklch(0.577 0.245 27.325);
+}
+/* ---------- payment ---------- */
+.card-pay{
+    margin-top: 16px;
+    height: 208px;
+    perspective: 800px;
+}
+.inner-pay{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+.card-pay:hover .inner-pay{
+    transform: rotateY(180deg);
+}
+.front-pay,
+.back-pay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 19px;
+    border-radius: 10px;
+    color: #fff;
+    backface-visibility: hidden;
+}
+.visa{
+    background-color: oklch(0.38 0.2 285);
+}
+.master{
+    background-color: oklch(0.5 0.22 12);
+}
+.paypal{
+    background-color: oklch(0.42 0.2 267);
+}
+.top-pay{
+    align-items: flex-start;
+}
+.chip-pay{
+    width: 48px;
+    height: 32px;
+    border-radius: 6px;
+    margin-top: 10px;
+    background-color: rgba(255,255,255,0.3);
+}
+.logo-pay{
+    position: relative;
+    margin-left: -8px;
+    margin-right: 0;
+}
+.logo-pay img{
+    width: 34px;
+    height: 24px;
+    border-radius: 3px;
+    margin-top: 4px;
+}
+.main-pay{
+    display: block;
+    width: fit-content;
+    margin-left: -8px;
+    margin-top: -8px;
+    margin-bottom: -6px;
+    padding: 3px 11px;
+    border-radius: 16px;
+    background-color: rgba(255,255,255,0.3);
+    font-size: 10px;
+    font-weight: 600;
+    position: relative;
+}
+.number-pay{
+    margin: 20px 0 16px;
+    font-size: 19px;
+    font-weight: 700;
+}
+.name-pay{
+    margin: 28px 0 16px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.item-quick:hover .send{
+    background-color: rgba(0, 0, 255, 0.268);
+}
+.item-quick:hover .add{
+    background-color: rgba(0, 128, 0, 0.232);
+}
+.item-quick:hover .pay{
+    background-color: rgba(128, 0, 128, 0.178);
+}
+.item-quick:hover .invest{
+    background-color:rgba(222, 184, 135, 0.24);
+}
+.bottom-pay span{
+    font-size: 10px;
+    display: block;
+}
+.bottom-pay p{
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+.verified{
+    color: oklch(0.723 0.219 149.579);
+}
+.back-pay{
+    transform: rotateY(180deg);
+    background-color: oklch(0.208 0.042 265.755);
+    padding: 16px 0;
+}
+.line-pay{
+    height: 36px;
+    background-color: #000;
+}
+.sign-pay{
+    margin: 6px 12px;
+    font-size: 9px;
+    color: oklch(0.707 0.022 261.325);
+}
+.sign-box{
+    margin: 0 12px;
+    padding: 6px;
+    border-radius: 3px;
+    background-color: oklch(0.928 0.006 264.531);
+    color: #000;
+    font-size: 11px;
+    font-weight: 600;
+}
+.cvv-pay{
+    margin: 10px 12px;
+}
+.cvv-pay span{
+    font-size: 10px;
+}
+.cvv-pay p{
+    width: fit-content;
+    margin: 3px 0;
+    padding: 5px 8px;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+}

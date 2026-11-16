@@ -1,0 +1,169 @@
+/* ================= responsive ================= */
+
+/* ---------- الشاشات أقل من 1200px ---------- */
+@media (max-width: 1200px) {
+    nav {
+        display: none;
+    }
+    main {
+        width: 78%;
+        margin-right: 22%; /* ضبط هامش الـ main ليناسب عرض الـ nav الثابت */
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(7, auto);
+        grid-template-areas:
+        "header header"
+        "expenses income"
+        "currentbalance currentbalance"
+        "transactions transactions"
+        "modern-activities bills"
+        "genral analysis"
+        "summary payment";
+    }
+    .expenses,
+    .income,
+    .currentbalance {
+        margin: 0px;
+    }
+    .item-nav {
+        font-size: 14px;
+    }
+    .item-quick {
+        font-size: 13px;
+    }
+}
+
+/* ---------- الشاشات أقل من 992px (تحويل القائمة لأعلى) ---------- */
+@media (max-width: 992px) {
+    nav {
+        position: static;
+        width: 100%;
+        border-left: 0;
+        border-bottom: oklch(0.928 0.006 264.531) 0.8px solid;
+        padding: 20px;
+    }
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+    }
+    .logo-nav {
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+    .item-nav,
+    .item-quick {
+        margin-bottom: 0px;
+    }
+    .title-quick {
+        margin: 20px 0 12px;
+        text-align: center;
+    }
+    main {
+        width: 100%;
+        margin-right: 0; /* إلغاء الهامش لأن الـ nav لم يعد مثبتآً بجانب الشاشة */
+        padding: 24px 16px;
+    }
+    .transactions {
+        overflow-x: auto;
+    }
+    .Classification,
+    .div {
+        min-width: 700px;
+    }
+}
+
+/* ---------- الشاشات أقل من 768px (عناصر عمود واحد) ---------- */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(11, auto);
+        grid-template-areas:
+        "header"
+        "expenses"
+        "income"
+        "currentbalance"
+        "transactions"
+        "modern-activities"
+        "bills"
+        "genral"
+        "analysis"
+        "summary"
+        "payment";
+    }
+    .header {
+        flex-direction: column-reverse;
+        gap: 16px;
+        padding: 16px;
+    }
+    .right-header {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .left-header {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .card-money .money {
+        font-size: 28px;
+    }
+    .total-bill .total-price-bill {
+        font-size: 28px;
+    }
+}
+
+/* ---------- الشاشات الصغيرة جداً أقل من 480px ---------- */
+@media (max-width: 480px) {
+    main {
+        gap: 12px;
+        padding: 16px 10px;
+    }
+    nav {
+        padding: 16px 12px;
+    }
+    .text-logo h1,
+    .right-header h1 {
+        font-size: 24px;
+    }
+    .card-money {
+        padding: 20px;
+    }
+    .card-money .money {
+        font-size: 24px;
+    }
+    .back,
+    .transactions {
+        padding: 16px;
+    }
+    .cards-bill {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4";
+    }
+    .chart {
+        padding: 0px;
+    }
+    .chart .red,
+    .chart .green {
+        width: 12px;
+    }
+    .modern-activities .card-modern-1 {
+        flex-direction: column-reverse;
+        gap: 8px;
+    }
+    .header-divs h3,
+    .heder h3,
+    .modern-activities h3,
+    .transactions h3,
+    .bills h3,
+    .genral h3,
+    .analysis h3,
+    .summary h3,
+    .payment h3 {
+        font-size: 16px;
+    }
+}
